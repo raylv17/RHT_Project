@@ -1,0 +1,231 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      radiationProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+radiation on;
+
+radiationModel  fvDOM;
+
+fvDOMCoeffs
+{
+    nPhi        _phi;      // azimuthal angles in PI/2 on X-Y.(from Y to X)
+    nTheta      _theta;      // polar angles in PI (from Z to X-Y plane)
+    maxIter     40;      // maximum number of iterations
+    tolerance   1e-10;   // convergence criteria for radiation iteration
+}
+
+// Number of flow iterations per radiation iteration
+solverFreq 1;
+
+absorptionEmissionModel constantAbsorptionEmission;
+// absorptionEmissionModel greyMeanAbsorptionEmission;
+
+constantAbsorptionEmissionCoeffs
+{
+    absorptivity    absorptivity    [ m^-1 ]       _tau;
+    emissivity      emissivity      [ m^-1 ]       0.01;
+    E               E               [ kg m^-1 s^-3 ]  0;
+}
+
+// absorptionEmissionModel greyMeanAbsorptionEmission;
+// z,G,ILambda_0_0,ILambda_1_0,a
+// -0.6,0,0,0,0.137075676926
+// -0.593969849246,9593016.56774,73.1610898127,73.1610898127,0.137075676926
+// -0.587939698492,12651633.1433,137.958776696,137.958776696,0.137075676926
+
+    // absorptivity    absorptivity    [ m^-1 ]       1.01;
+    // emissivity      emissivity      [ m^-1 ]       0.01;
+// z,G,ILambda_0_0,ILambda_1_0,a
+// -0.6,0,0,0,1.01
+// -0.593969849246,4255455.51373,531.820597808,531.820597808,1.01
+// -0.587939698492,5665657.70416,1001.42184414,1001.42184414,1.01
+
+
+//     absorptivity    absorptivity    [ m^-1 ]       0.01;
+//     emissivity      emissivity      [ m^-1 ]       0.01;
+// z,G,ILambda_0_0,ILambda_1_0,a
+// -0.6,0,0,0,0.01
+// -0.593969849246 ,11318498.0167,5.34787189801,5.34787189801,0.01
+// -0.587939698492 ,14904513.7988,10.0865141312,10.0865141312,0.01
+
+
+
+//     absorptivity    absorptivity    [ m^-1 ]       0.01;
+//     emissivity      emissivity      [ m^-1 ]       0.01;
+// linearupwding
+// z,G,ILambda_0_0,ILambda_1_0,a
+// -0.6,0,0,0,0.01
+// -0.593969849246 ,10689437.7571,3.56551621466,3.56551621466,0.01
+// -0.587939698492 ,13214636.0426,7.13091053809,7.13091053809,0.01
+
+greyMeanAbsorptionEmissionCoeffs
+{
+    lookUpTableFileName     none;
+
+    //EhrrCoeff                0.28;
+    EhrrCoeff                0.0;
+
+     CO2
+     {
+         Tcommon         200;   //Common Temp
+         invTemp         true;   //Is the polynomio using inverse temperature.
+         Tlow            200;   //Low Temp
+         Thigh           2500;  //High Temp
+
+         loTcoeffs       //coefss for T < Tcommon
+         (
+             0           //  a0            +
+             0           //  a1*T          +
+             0           //  a2*T^(+/-)2   +
+             0           //  a3*T^(+/-)3   +
+             0           //  a4*T^(+/-)4   +
+             0           //  a5*T^(+/-)5   +
+         );
+         hiTcoeffs        //coefss for T > Tcommon
+         (
+             18.741
+             -121.31e3
+             273.5e6
+             -194.05e9
+             56.31e12
+             -5.8169e15
+         );
+
+     }
+
+     H2O
+     {
+         Tcommon         200;
+         invTemp         true;
+         Tlow            200;
+         Thigh           2500;
+
+         loTcoeffs
+         (
+             0
+             0
+             0
+             0
+             0
+             0
+         );
+         hiTcoeffs
+         (
+             -0.23093
+             -1.12390e3
+              9.4153e6
+             -2.99885e9
+              0.51382e12
+             -1.868e10
+         );
+     }
+
+     C2H4  // extracted from radcal
+       {
+         Tcommon         200;
+         Tlow            200;
+         Thigh           2500;
+         invTemp         true;
+
+         loTcoeffs
+           (
+            0
+            0
+            0
+            0
+            0
+            0
+            );
+         hiTcoeffs
+           (
+            -17.735222324155885
+            68621.52037103006
+            -62496626.000333756
+            26369362146.308357
+            -4306626029691.7354
+            160423015240912.53
+            );
+       }
+
+     O2
+     {
+         Tcommon         200;
+         invTemp         true;
+         Tlow            200;
+         Thigh           2500;
+
+         loTcoeffs
+         (
+             0
+             0
+             0
+             0
+             0
+             0
+         );
+         hiTcoeffs
+         (
+             0.1
+             0
+             0
+             0
+             0
+             0
+         );
+     }
+
+
+     N2
+     {
+         Tcommon         200;
+         invTemp         true;
+         Tlow            200;
+         Thigh           2500;
+
+         loTcoeffs
+         (
+             0
+             0
+             0
+             0
+             0
+             0
+         );
+         hiTcoeffs
+         (
+             0.1
+             0
+             0
+             0
+             0
+             0
+         );
+     }
+}
+
+scatterModel    none;
+
+sootModel none;//mixtureFractionSoot<gasHThermoPhysics>;
+// sootModel mixtureFractionSoot<gasHThermoPhysics>;
+
+mixtureFractionSootCoeffs
+{
+    //CH4 + 2O2 + 7.5N2 = CO2 + 2H2O + 7.5N2 + nuSoot soot
+    nuSoot              0.055;
+    Wsoot               12;
+}
+
+
+// ************************************************************************* //

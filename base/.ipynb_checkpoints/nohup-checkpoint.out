@@ -1,0 +1,36 @@
+
+** (evince:6100): WARNING **: 11:01:02.240: Error when getting information for file “/home/rafay/Desktop/Study/Radiative_Heat_Transfer/Local_copy_RHT2324/01_Projects/02_Rafay/Case_1_q1D_SolidAngle/base/disown”: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.240: set_filenames: Error when getting information for file “/home/rafay/Desktop/Study/Radiative_Heat_Transfer/Local_copy_RHT2324/01_Projects/02_Rafay/Case_1_q1D_SolidAngle/base/disown”: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.252: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.253: Error setting file metadata: No such file or directory
+
+** (evince:6100): WARNING **: 11:01:02.254: Error setting file metadata: No such file or directory
+
+(evince:6130): GLib-GObject-WARNING **: 11:01:55.300: invalid unclassed pointer in cast to 'HdyHeaderBar'
+
+(evince:6130): Handy-CRITICAL **: 11:01:55.300: hdy_header_bar_get_title: assertion 'HDY_IS_HEADER_BAR (self)' failed

@@ -1,0 +1,516 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2306                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _fbf00d6b-20230626 OPENFOAM=2306 version=2306
+Arch   : "LSB;label=32;scalar=64"
+Exec   : fireRADFoam_MaCFP
+Date   : Mar 12 2024
+Time   : 19:27:48
+Host   : pop-os
+PID    : 172609
+I/O    : uncollated
+Case   : /home/rafay/Desktop/Study/Radiative_Heat_Transfer/Local_copy_RHT2324/01_Projects/02_Rafay/Case_1_q1D_SolidAngle/new_case3/th_2-ph_4/tau_1/res_1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PIMPLE: no residual control data found. Calculations will employ 10 corrector loops
+
+Reading thermophysical properties
+
+Selecting thermodynamics package 
+{
+    type            hePsiThermo;
+    mixture         singleStepReactingMixture;
+    transport       sutherland;
+    thermo          janaf;
+    energy          sensibleEnthalpy;
+    equationOfState perfectGas;
+    specie          specie;
+}
+
+Selecting chemistryReader foamChemistryReader
+    elements not defined in "/home/rafay/Desktop/Study/Radiative_Heat_Transfer/Local_copy_RHT2324/01_Projects/02_Rafay/Case_1_q1D_SolidAngle/new_case3/th_2-ph_4/tau_1/res_1/constant/reactions"
+Fuel heat of combustion :47168962.4726
+stoichiometric air-fuel ratio :14.6914056505
+stoichiometric oxygen-fuel ratio :3.42181919285
+Maximum products mass concentrations:
+    H2O: 0.0818486943001
+    CO2: 0.199950099979
+    N2: 0.718201205721
+Creating component thermo properties:
+    multi-component carrier - 6 species
+    no liquid components
+    no solid components
+Creating field rho
+
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting radiationModel fvDOM
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting scatterModel none
+Selecting sootModel none
+fvDOM : Allocated 32 rays with average orientation:
+	I0 : dAve : 	(0.0597848753626 0.300558864942 0.196349540849) : omega : 	0.392699081699 : d : 	(0.137949689641 0.693519922661 0.707106781187)
+	I1 : dAve : 	(0.170252920765 0.254801502328 0.196349540849) : omega : 	0.392699081699 : d : 	(0.392847479194 0.58793780121 0.707106781187)
+	I2 : dAve : 	(0.254801502328 0.170252920765 0.196349540849) : omega : 	0.392699081699 : d : 	(0.58793780121 0.392847479194 0.707106781187)
+	I3 : dAve : 	(0.300558864942 0.0597848753626 0.196349540849) : omega : 	0.392699081699 : d : 	(0.693519922661 0.137949689641 0.707106781187)
+	I4 : dAve : 	(0.300558864942 -0.0597848753626 0.196349540849) : omega : 	0.392699081699 : d : 	(0.693519922661 -0.137949689641 0.707106781187)
+	I5 : dAve : 	(0.254801502328 -0.170252920765 0.196349540849) : omega : 	0.392699081699 : d : 	(0.58793780121 -0.392847479194 0.707106781187)
+	I6 : dAve : 	(0.170252920765 -0.254801502328 0.196349540849) : omega : 	0.392699081699 : d : 	(0.392847479194 -0.58793780121 0.707106781187)
+	I7 : dAve : 	(0.0597848753626 -0.300558864942 0.196349540849) : omega : 	0.392699081699 : d : 	(0.137949689641 -0.693519922661 0.707106781187)
+	I8 : dAve : 	(-0.0597848753626 -0.300558864942 0.196349540849) : omega : 	0.392699081699 : d : 	(-0.137949689641 -0.693519922661 0.707106781187)
+	I9 : dAve : 	(-0.170252920765 -0.254801502328 0.196349540849) : omega : 	0.392699081699 : d : 	(-0.392847479194 -0.58793780121 0.707106781187)
+	I10 : dAve : 	(-0.254801502328 -0.170252920765 0.196349540849) : omega : 	0.392699081699 : d : 	(-0.58793780121 -0.392847479194 0.707106781187)
+	I11 : dAve : 	(-0.300558864942 -0.0597848753626 0.196349540849) : omega : 	0.392699081699 : d : 	(-0.693519922661 -0.137949689641 0.707106781187)
+	I12 : dAve : 	(-0.300558864942 0.0597848753626 0.196349540849) : omega : 	0.392699081699 : d : 	(-0.693519922661 0.137949689641 0.707106781187)
+	I13 : dAve : 	(-0.254801502328 0.170252920765 0.196349540849) : omega : 	0.392699081699 : d : 	(-0.58793780121 0.392847479194 0.707106781187)
+	I14 : dAve : 	(-0.170252920765 0.254801502328 0.196349540849) : omega : 	0.392699081699 : d : 	(-0.392847479194 0.58793780121 0.707106781187)
+	I15 : dAve : 	(-0.0597848753626 0.300558864942 0.196349540849) : omega : 	0.392699081699 : d : 	(-0.137949689641 0.693519922661 0.707106781187)
+	I16 : dAve : 	(0.0597848753626 0.300558864942 -0.196349540849) : omega : 	0.392699081699 : d : 	(0.137949689641 0.693519922661 -0.707106781187)
+	I17 : dAve : 	(0.170252920765 0.254801502328 -0.196349540849) : omega : 	0.392699081699 : d : 	(0.392847479194 0.58793780121 -0.707106781187)
+	I18 : dAve : 	(0.254801502328 0.170252920765 -0.196349540849) : omega : 	0.392699081699 : d : 	(0.58793780121 0.392847479194 -0.707106781187)
+	I19 : dAve : 	(0.300558864942 0.0597848753626 -0.196349540849) : omega : 	0.392699081699 : d : 	(0.693519922661 0.137949689641 -0.707106781187)
+	I20 : dAve : 	(0.300558864942 -0.0597848753626 -0.196349540849) : omega : 	0.392699081699 : d : 	(0.693519922661 -0.137949689641 -0.707106781187)
+	I21 : dAve : 	(0.254801502328 -0.170252920765 -0.196349540849) : omega : 	0.392699081699 : d : 	(0.58793780121 -0.392847479194 -0.707106781187)
+	I22 : dAve : 	(0.170252920765 -0.254801502328 -0.196349540849) : omega : 	0.392699081699 : d : 	(0.392847479194 -0.58793780121 -0.707106781187)
+	I23 : dAve : 	(0.0597848753626 -0.300558864942 -0.196349540849) : omega : 	0.392699081699 : d : 	(0.137949689641 -0.693519922661 -0.707106781187)
+	I24 : dAve : 	(-0.0597848753626 -0.300558864942 -0.196349540849) : omega : 	0.392699081699 : d : 	(-0.137949689641 -0.693519922661 -0.707106781187)
+	I25 : dAve : 	(-0.170252920765 -0.254801502328 -0.196349540849) : omega : 	0.392699081699 : d : 	(-0.392847479194 -0.58793780121 -0.707106781187)
+	I26 : dAve : 	(-0.254801502328 -0.170252920765 -0.196349540849) : omega : 	0.392699081699 : d : 	(-0.58793780121 -0.392847479194 -0.707106781187)
+	I27 : dAve : 	(-0.300558864942 -0.0597848753626 -0.196349540849) : omega : 	0.392699081699 : d : 	(-0.693519922661 -0.137949689641 -0.707106781187)
+	I28 : dAve : 	(-0.300558864942 0.0597848753626 -0.196349540849) : omega : 	0.392699081699 : d : 	(-0.693519922661 0.137949689641 -0.707106781187)
+	I29 : dAve : 	(-0.254801502328 0.170252920765 -0.196349540849) : omega : 	0.392699081699 : d : 	(-0.58793780121 0.392847479194 -0.707106781187)
+	I30 : dAve : 	(-0.170252920765 0.254801502328 -0.196349540849) : omega : 	0.392699081699 : d : 	(-0.392847479194 0.58793780121 -0.707106781187)
+	I31 : dAve : 	(-0.0597848753626 0.300558864942 -0.196349540849) : omega : 	0.392699081699 : d : 	(-0.137949689641 0.693519922661 -0.707106781187)
+Total omega : 12.5663706144
+
+Courant Number mean: 0 max: 0
+
+Starting time loop
+
+Sampled set:
+    data -> csv
+
+Sampled set:
+    data -> csv
+
+Sampled surface:
+    yNormal -> ensight
+        sampledCuttingPlane: yNormal : plane:(0 1 0) (0 0 0) offsets:(0)
+
+Sampled surface:
+    zNormal -> ensight
+        sampledCuttingPlane: zNormal : plane:(0 0 1) (0 0 0) offsets:(0)
+
+Sampled surface:
+    patchAll -> ensight
+        sampledPatch: patchAll : patches:(".*WW.*")
+
+deltaT = 1
+Time = 1
+
+PIMPLE: iteration 1
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1, Final residual = 4.02413349557e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1, Final residual = 3.37892494385e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1, Final residual = 1.25565718683e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1, Final residual = 1.87576490765e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1, Final residual = 2.70876385441e-61, No Iterations 25
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1, Final residual = 3.76475964307e-61, No Iterations 28
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1, Final residual = 8.13092601484e-61, No Iterations 28
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1, Final residual = 1.57045971712e-61, No Iterations 24
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1, Final residual = 5.91744186756e-62, No Iterations 17
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1, Final residual = 1.08548455869e-61, No Iterations 18
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1, Final residual = 3.01952607202e-61, No Iterations 17
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1, Final residual = 1.3336595133e-61, No Iterations 17
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1, Final residual = 9.57654004046e-64, No Iterations 25
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1, Final residual = 4.80523976007e-61, No Iterations 28
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1, Final residual = 4.73330054014e-62, No Iterations 28
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1, Final residual = 2.3248528849e-61, No Iterations 25
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1, Final residual = 7.62119342685e-61, No Iterations 16
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1, Final residual = 7.08581903159e-61, No Iterations 21
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1, Final residual = 4.46844503997e-62, No Iterations 18
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1, Final residual = 1.87079919173e-61, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1, Final residual = 6.86033036994e-61, No Iterations 25
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1, Final residual = 9.78138496984e-62, No Iterations 29
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1, Final residual = 5.96888319616e-62, No Iterations 29
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1, Final residual = 4.49393558425e-61, No Iterations 24
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1, Final residual = 1.8257430164e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1, Final residual = 1.40624030964e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1, Final residual = 2.26341613674e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1, Final residual = 4.26582344812e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1, Final residual = 4.59012655258e-61, No Iterations 24
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1, Final residual = 5.39634365777e-62, No Iterations 29
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1, Final residual = 1.09740728636e-61, No Iterations 29
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1, Final residual = 1.58000485202e-61, No Iterations 25
+Radiation solver iter: 1
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.69251671357e-16, Final residual = 1.66777230018e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.72993482087e-16, Final residual = 4.15384800485e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.8234800891e-16, Final residual = 5.83707078807e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.89048460681e-16, Final residual = 5.91506395132e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 3.51164585996e-16, Final residual = 7.27897353418e-62, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 4.17603481154e-16, Final residual = 4.77260266439e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 4.09815293706e-16, Final residual = 6.55696641825e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 3.70395752768e-16, Final residual = 6.02868809634e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 2.66712788026e-16, Final residual = 9.61082355797e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 2.85813426516e-16, Final residual = 1.35068934225e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 2.65799090057e-16, Final residual = 3.50246891529e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 2.61796222766e-16, Final residual = 2.3326107605e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 3.57734509486e-16, Final residual = 1.39655421806e-61, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 4.1438378355e-16, Final residual = 4.32185003031e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 4.08248954331e-16, Final residual = 1.80463678067e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 3.31889909798e-16, Final residual = 5.93029242583e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 2.21245436723e-16, Final residual = 5.01139047706e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 2.67191391724e-16, Final residual = 2.32462531012e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 2.68975278234e-16, Final residual = 3.04537325412e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 2.28468001619e-16, Final residual = 4.16798189843e-61, No Iterations 10
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 3.44725190788e-16, Final residual = 4.82218400037e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 4.31526497821e-16, Final residual = 7.64085961107e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 4.33310384331e-16, Final residual = 6.13031317941e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 3.54732359017e-16, Final residual = 1.63004903114e-61, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.33965525992e-16, Final residual = 3.60448169967e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.76256689118e-16, Final residual = 4.96914645233e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.5876589943e-16, Final residual = 1.21356624652e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.6742427542e-16, Final residual = 6.02833544178e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 3.44681681361e-16, Final residual = 5.56840429859e-63, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 4.27480121102e-16, Final residual = 9.85126246156e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 4.43404571415e-16, Final residual = 1.59845060283e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 3.59648924278e-16, Final residual = 5.80869367643e-61, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 2
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.65466351201e-16, Final residual = 6.62984457849e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.64422124951e-16, Final residual = 3.99110441199e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.69425709066e-16, Final residual = 4.3438061608e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.7294997266e-16, Final residual = 1.25919925808e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.7786653792e-16, Final residual = 9.10125571265e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.74646840316e-16, Final residual = 1.15028144663e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.81129744951e-16, Final residual = 4.88652960386e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 2.05538533546e-16, Final residual = 8.85996745412e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.76909330524e-16, Final residual = 3.36299863725e-61, No Iterations 7
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.81608348649e-16, Final residual = 7.93856434064e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.73298048076e-16, Final residual = 3.63814255092e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.53501258753e-16, Final residual = 9.4542295764e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.88700385264e-16, Final residual = 1.05411976554e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.81651858076e-16, Final residual = 9.42184734603e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.80042009274e-16, Final residual = 1.24997338261e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.72427859535e-16, Final residual = 5.6666446004e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.31572507503e-16, Final residual = 3.66601339437e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.60506276514e-16, Final residual = 5.0899608503e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.80607631826e-16, Final residual = 2.16778469429e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.43885675367e-16, Final residual = 6.80192407354e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.59244503128e-16, Final residual = 1.03770335206e-65, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.61419974482e-16, Final residual = 3.96668888064e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.82086952347e-16, Final residual = 2.01663456378e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.77039858806e-16, Final residual = 8.67390783724e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.27656659065e-16, Final residual = 1.05227616535e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.68424992243e-16, Final residual = 9.78225518597e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.50238051722e-16, Final residual = 5.14141998021e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.48410655784e-16, Final residual = 4.91842679109e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.57808692034e-16, Final residual = 5.12559310642e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.87090536462e-16, Final residual = 1.05262648954e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.64161068389e-16, Final residual = 3.08962081438e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.65640388909e-16, Final residual = 8.87637172352e-62, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 3
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.47192391826e-16, Final residual = 5.06671192562e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.65422841774e-16, Final residual = 4.11009242678e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.73776651774e-16, Final residual = 4.59892065174e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.78562688753e-16, Final residual = 1.36065471066e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.52979145628e-16, Final residual = 1.0409235629e-66, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.58896427711e-16, Final residual = 5.78105191203e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.64117558962e-16, Final residual = 2.40630992461e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1.73733142347e-16, Final residual = 1.26832484507e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.63029823284e-16, Final residual = 3.36542958585e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.59288012555e-16, Final residual = 7.23327292374e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.6115891792e-16, Final residual = 2.00195160547e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.46322203284e-16, Final residual = 5.13190250471e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.64683181514e-16, Final residual = 5.04595116967e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.50020504586e-16, Final residual = 1.1177101839e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.6503125693e-16, Final residual = 1.13248522072e-62, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.60593295368e-16, Final residual = 9.06344037453e-61, No Iterations 18
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.195203962e-16, Final residual = 6.57068919578e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.48845750055e-16, Final residual = 8.18351633934e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.6398703068e-16, Final residual = 4.93734241754e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.42275826565e-16, Final residual = 1.12695649632e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.44059713076e-16, Final residual = 6.98873422187e-65, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.43711637659e-16, Final residual = 3.2405786868e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.62029106462e-16, Final residual = 3.36323989653e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.6220314417e-16, Final residual = 2.85706202348e-65, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.25437678284e-16, Final residual = 3.56730526532e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.65770917191e-16, Final residual = 3.56448188261e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.47714504951e-16, Final residual = 3.98401032836e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.45539033597e-16, Final residual = 1.30567257056e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.39882808076e-16, Final residual = 3.6492718745e-64, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.75952123128e-16, Final residual = 6.57100750099e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.44407788492e-16, Final residual = 4.34396752335e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.6220314417e-16, Final residual = 6.5823273372e-62, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 4
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.53109673909e-16, Final residual = 5.67217793547e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.60506276514e-16, Final residual = 3.66752908323e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.66815143441e-16, Final residual = 4.2405816973e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.67554803701e-16, Final residual = 4.46050115118e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.49411372607e-16, Final residual = 5.22872182665e-63, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.52108957086e-16, Final residual = 2.52035515922e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.52979145628e-16, Final residual = 4.11681387165e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1.62768766722e-16, Final residual = 1.51599345662e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.61855068753e-16, Final residual = 6.67479740898e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.5981012568e-16, Final residual = 6.81863838045e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.58243786305e-16, Final residual = 1.21694055264e-61, No Iterations 7
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.40796506044e-16, Final residual = 7.88045530549e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.60723823649e-16, Final residual = 1.13456578558e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.46757297555e-16, Final residual = 4.76509952212e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.61594012191e-16, Final residual = 5.89350858165e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.54327937868e-16, Final residual = 9.94693182972e-62, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.22435527815e-16, Final residual = 2.26435225178e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.3757680844e-16, Final residual = 9.62761351443e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.55894277243e-16, Final residual = 2.45352649895e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.27569640211e-16, Final residual = 7.23505412365e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.42928467972e-16, Final residual = 6.37131408928e-66, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.41971260576e-16, Final residual = 1.59645681988e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.56938503493e-16, Final residual = 4.60405168222e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.55111107555e-16, Final residual = 1.37534659811e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.26699451669e-16, Final residual = 3.7261461014e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.61985597034e-16, Final residual = 6.00911304143e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.56372880941e-16, Final residual = 7.76048432292e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.43798656513e-16, Final residual = 4.918936468e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.4279793969e-16, Final residual = 5.96775169344e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.65901445472e-16, Final residual = 3.6141112241e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.46322203284e-16, Final residual = 1.48139213184e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.63943521253e-16, Final residual = 8.48909539551e-62, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 5
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.48410655784e-16, Final residual = 6.49220633292e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.59288012555e-16, Final residual = 1.89383152119e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.76430726826e-16, Final residual = 5.522298784e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.69686765628e-16, Final residual = 4.80169303122e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.48932768909e-16, Final residual = 1.18600217934e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.50455598857e-16, Final residual = 8.08430214821e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.56894994066e-16, Final residual = 5.30831182397e-63, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1.68381482816e-16, Final residual = 2.31892497823e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.59157484274e-16, Final residual = 3.51173500721e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.60288729378e-16, Final residual = 2.45425417405e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.6085435193e-16, Final residual = 3.67761205568e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.40143864638e-16, Final residual = 1.86455934885e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.6981729391e-16, Final residual = 4.07273091333e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.40535449482e-16, Final residual = 6.49061831626e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.59200993701e-16, Final residual = 3.93162513977e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.51412806253e-16, Final residual = 1.2366149513e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.18084585106e-16, Final residual = 3.02477201561e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.42754430263e-16, Final residual = 2.97910653499e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.56242352659e-16, Final residual = 2.2991844861e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.35053261669e-16, Final residual = 1.81463621354e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.38577525263e-16, Final residual = 5.21116124166e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.43276543388e-16, Final residual = 1.53917092487e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.57286578909e-16, Final residual = 1.41425269669e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.59549069118e-16, Final residual = 2.68713299351e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.23653791773e-16, Final residual = 3.44597485976e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.6189857818e-16, Final residual = 3.99428062517e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.47714504951e-16, Final residual = 4.18125237364e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.46931335263e-16, Final residual = 4.91563251223e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.40752996617e-16, Final residual = 7.9497581439e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.62594729014e-16, Final residual = 1.75423489825e-61, No Iterations 21
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.42275826565e-16, Final residual = 6.88938726905e-61, No Iterations 24
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.59026955993e-16, Final residual = 7.10006855121e-61, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 6
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.49454882034e-16, Final residual = 8.95659486322e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.57112541201e-16, Final residual = 1.14120455986e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.68207445107e-16, Final residual = 4.27879933185e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.70078350472e-16, Final residual = 5.07005538368e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.51978428805e-16, Final residual = 5.12711956267e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.50542617711e-16, Final residual = 9.28439872384e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.49411372607e-16, Final residual = 1.55889320072e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1.65466351201e-16, Final residual = 9.13406070703e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.5802623917e-16, Final residual = 1.29958329715e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.58417824014e-16, Final residual = 4.33740872393e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.56372880941e-16, Final residual = 2.39984889446e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.42971977399e-16, Final residual = 3.08520096784e-61, No Iterations 7
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.63421408128e-16, Final residual = 1.86014224653e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.43929184794e-16, Final residual = 3.0829648786e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.56024805524e-16, Final residual = 4.84007164475e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.47627486097e-16, Final residual = 2.02362170187e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.17562471981e-16, Final residual = 5.46195031947e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.40752996617e-16, Final residual = 1.70862292154e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.53501258753e-16, Final residual = 1.03885540727e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.30354243544e-16, Final residual = 9.96248096902e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.40448430628e-16, Final residual = 4.27337399452e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.41449147451e-16, Final residual = 2.59120064055e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.58939937139e-16, Final residual = 8.04147180737e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.48454165211e-16, Final residual = 5.0849726717e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.26612432815e-16, Final residual = 3.56823888748e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.67859369691e-16, Final residual = 6.02112523616e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.54719522711e-16, Final residual = 4.02570779291e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.40578958909e-16, Final residual = 4.62311775097e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.45016920472e-16, Final residual = 5.28890329108e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.70034841045e-16, Final residual = 1.95537448723e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.38882091253e-16, Final residual = 4.71671077231e-62, No Iterations 24
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.61376465055e-16, Final residual = 8.85194824867e-62, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 7
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.48149599222e-16, Final residual = 5.39772643732e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.60723823649e-16, Final residual = 3.96641697051e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.75342991149e-16, Final residual = 4.14390926007e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.72036274691e-16, Final residual = 1.14721547465e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.59288012555e-16, Final residual = 5.8480487702e-62, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.5041208943e-16, Final residual = 2.45178873693e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.50629636565e-16, Final residual = 1.08582087588e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1.62551219587e-16, Final residual = 9.74255328815e-64, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.60375748232e-16, Final residual = 7.64026234081e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.58852918284e-16, Final residual = 4.79262640189e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.62072615889e-16, Final residual = 2.62955126106e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.40448430628e-16, Final residual = 5.40381135426e-62, No Iterations 6
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.71166086149e-16, Final residual = 4.80091910419e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.43015486826e-16, Final residual = 8.31852998397e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.56633937503e-16, Final residual = 2.11416339361e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.52544051357e-16, Final residual = 9.50324533897e-66, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.1355960469e-16, Final residual = 4.08936282819e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.41144581461e-16, Final residual = 1.64226596091e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.54719522711e-16, Final residual = 6.41911875229e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.33269375159e-16, Final residual = 5.23325493215e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.37315751878e-16, Final residual = 6.74215200439e-61, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.40578958909e-16, Final residual = 2.06776609766e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.60419257659e-16, Final residual = 4.48343370464e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.5354476818e-16, Final residual = 4.59604252977e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.23218697502e-16, Final residual = 3.74751791174e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.69991331618e-16, Final residual = 4.62740266454e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.45800090159e-16, Final residual = 3.51655772185e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.4414673193e-16, Final residual = 6.5014152396e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.38359978128e-16, Final residual = 3.11109479818e-66, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.63900011826e-16, Final residual = 4.12140848861e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.44581826201e-16, Final residual = 6.64478613313e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.58504842868e-16, Final residual = 7.10256856063e-61, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 8
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.49237334899e-16, Final residual = 7.95911310315e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.58156767451e-16, Final residual = 1.17124148454e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.69425709066e-16, Final residual = 4.76288670052e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.67032690576e-16, Final residual = 4.71449467932e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.4936786318e-16, Final residual = 6.27535266889e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.53196692763e-16, Final residual = 1.19136232653e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.49498391461e-16, Final residual = 4.60253689182e-62, No Iterations 24
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1.62855785576e-16, Final residual = 5.6893192288e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.61550502764e-16, Final residual = 2.89724562974e-61, No Iterations 7
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.70426425889e-16, Final residual = 2.02765244483e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.56590428076e-16, Final residual = 3.03507368328e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.42580392555e-16, Final residual = 6.73434043387e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.64596162659e-16, Final residual = 4.89321904096e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.50194542295e-16, Final residual = 8.53148151215e-62, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.63508426982e-16, Final residual = 1.65961004916e-63, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.5145631568e-16, Final residual = 2.19316637455e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.19433377346e-16, Final residual = 1.76225531687e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.42406354847e-16, Final residual = 3.29499636747e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.59549069118e-16, Final residual = 7.02873308842e-62, No Iterations 7
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.29310017294e-16, Final residual = 4.86452806353e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.36967676461e-16, Final residual = 9.26855670781e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.4488639219e-16, Final residual = 2.07036225092e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.5489356042e-16, Final residual = 8.21470896818e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.49541900888e-16, Final residual = 1.24842920131e-66, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.24698018023e-16, Final residual = 3.4437888142e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.68947105368e-16, Final residual = 3.51803787239e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.5145631568e-16, Final residual = 3.70474248249e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.40230883492e-16, Final residual = 4.27714951552e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.39317185524e-16, Final residual = 1.31637450348e-67, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.70208878753e-16, Final residual = 3.36472609174e-63, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.41579675732e-16, Final residual = 5.17784785514e-64, No Iterations 24
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.63856502399e-16, Final residual = 2.46280419338e-61, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 9
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.43624618805e-16, Final residual = 4.03049817481e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.64465634378e-16, Final residual = 4.60572614348e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.73776651774e-16, Final residual = 1.38058021685e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.6877306766e-16, Final residual = 4.73136984295e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.55720239534e-16, Final residual = 4.46261894878e-66, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.50847183701e-16, Final residual = 8.02539574879e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.51412806253e-16, Final residual = 1.67274699174e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1.63682464691e-16, Final residual = 2.70097048212e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.55241635836e-16, Final residual = 6.42680863251e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.64335106097e-16, Final residual = 2.27947483204e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.67032690576e-16, Final residual = 2.25095349346e-61, No Iterations 7
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.39752279794e-16, Final residual = 1.6469277329e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.6607548318e-16, Final residual = 3.19145415572e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.40317902346e-16, Final residual = 8.00298438997e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.60767333076e-16, Final residual = 2.9428790514e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.5010752344e-16, Final residual = 4.17234618652e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.15212962919e-16, Final residual = 4.61909058496e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.37228733024e-16, Final residual = 3.30185744145e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.56546918649e-16, Final residual = 1.98874428799e-64, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.32877790315e-16, Final residual = 3.40169727193e-62, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.41797222867e-16, Final residual = 2.50619813076e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.40187374065e-16, Final residual = 9.49333273333e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.57852201461e-16, Final residual = 2.90352283269e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.57112541201e-16, Final residual = 4.56032922414e-66, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.24393452034e-16, Final residual = 3.58417015742e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.62768766722e-16, Final residual = 6.67231496906e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.43624618805e-16, Final residual = 3.92234825955e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.47670995524e-16, Final residual = 5.18108667521e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.39839298649e-16, Final residual = 6.87829953463e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.64596162659e-16, Final residual = 2.21708341451e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.4070948719e-16, Final residual = 5.82494193895e-62, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.62638238441e-16, Final residual = 6.61391976555e-61, No Iterations 19
+min/max(T) = 1000, 1000
+PIMPLE: iteration 10
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for ILambda_0_0, Initial residual = 1.46887825836e-16, Final residual = 7.62622262972e-62, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_1_0, Initial residual = 1.56894994066e-16, Final residual = 4.0241273731e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_2_0, Initial residual = 1.69730275055e-16, Final residual = 4.41993275983e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_3_0, Initial residual = 1.64161068389e-16, Final residual = 4.46345870632e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_4_0, Initial residual = 1.51586843961e-16, Final residual = 4.01654204193e-63, No Iterations 20
+DILUPBiCGStab:  Solving for ILambda_5_0, Initial residual = 1.47496957815e-16, Final residual = 9.71250628733e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_6_0, Initial residual = 1.55154616982e-16, Final residual = 1.78090197569e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_7_0, Initial residual = 1.62681747868e-16, Final residual = 7.12665227655e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_8_0, Initial residual = 1.61419974482e-16, Final residual = 5.81690856648e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_9_0, Initial residual = 1.58287295732e-16, Final residual = 4.76673047527e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_10_0, Initial residual = 1.59331521982e-16, Final residual = 2.90570750446e-61, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_11_0, Initial residual = 1.47801523805e-16, Final residual = 5.4779585361e-63, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_12_0, Initial residual = 1.62464200732e-16, Final residual = 4.04791828962e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_13_0, Initial residual = 1.48193108649e-16, Final residual = 3.3397350109e-61, No Iterations 21
+DILUPBiCGStab:  Solving for ILambda_14_0, Initial residual = 1.6533582292e-16, Final residual = 8.95120236074e-63, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_15_0, Initial residual = 1.50151032868e-16, Final residual = 2.3688037693e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_16_0, Initial residual = 1.16735792867e-16, Final residual = 5.86729801804e-61, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_17_0, Initial residual = 1.46757297555e-16, Final residual = 2.62582359974e-61, No Iterations 10
+DILUPBiCGStab:  Solving for ILambda_18_0, Initial residual = 1.56938503493e-16, Final residual = 3.76717750078e-62, No Iterations 8
+DILUPBiCGStab:  Solving for ILambda_19_0, Initial residual = 1.32703752607e-16, Final residual = 2.73521559877e-63, No Iterations 9
+DILUPBiCGStab:  Solving for ILambda_20_0, Initial residual = 1.41144581461e-16, Final residual = 4.95399936349e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_21_0, Initial residual = 1.3892560068e-16, Final residual = 3.99255361439e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_22_0, Initial residual = 1.59897144534e-16, Final residual = 4.57775269726e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_23_0, Initial residual = 1.51499825107e-16, Final residual = 5.65143516828e-62, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_24_0, Initial residual = 1.2713454594e-16, Final residual = 1.17176894591e-63, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_25_0, Initial residual = 1.68076916826e-16, Final residual = 4.17576221552e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_26_0, Initial residual = 1.51673862815e-16, Final residual = 3.73179471821e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_27_0, Initial residual = 1.38229449846e-16, Final residual = 6.37452051464e-64, No Iterations 2
+DILUPBiCGStab:  Solving for ILambda_28_0, Initial residual = 1.46757297555e-16, Final residual = 2.08007582148e-61, No Iterations 19
+DILUPBiCGStab:  Solving for ILambda_29_0, Initial residual = 1.69643256201e-16, Final residual = 2.86546416555e-61, No Iterations 22
+DILUPBiCGStab:  Solving for ILambda_30_0, Initial residual = 1.4070948719e-16, Final residual = 3.64056255496e-61, No Iterations 23
+DILUPBiCGStab:  Solving for ILambda_31_0, Initial residual = 1.63769483545e-16, Final residual = 5.92063407319e-61, No Iterations 18
+min/max(T) = 1000, 1000
+ExecutionTime = 0.32 s  ClockTime = 0 s
+
+writeObjects writeObjects1.writeObjects write:
+    writing object a
+    writing object qem
+End
+

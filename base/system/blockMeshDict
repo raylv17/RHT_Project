@@ -1,0 +1,127 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  | =========                 |                                                 |
+  | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+  |  \\    /   O peration     | Version:  v2006                                 |
+  |   \\  /    A nd           | Website:  www.openfoam.com                      |
+  |    \\/     M anipulation  |                                                 |
+  \*---------------------------------------------------------------------------*/
+FoamFile
+{
+  version     2.0;
+  format      ascii;
+  class       dictionary;
+  object      blockMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+scale   1;
+
+// block 1
+b1_vx1  -4.8;
+b1_vx2  4.8;
+b1_vy1  -4.8;
+b1_vy2  4.8;
+b1_vz1  -0.6;
+b1_vz2  0.6; // 1.20
+
+vertices
+(
+ //block 1
+ ($b1_vx1 $b1_vy1 $b1_vz1) //0
+ ($b1_vx2 $b1_vy1 $b1_vz1) //1
+ ($b1_vx2 $b1_vy2 $b1_vz1) //2
+ ($b1_vx1 $b1_vy2 $b1_vz1) //3
+ ($b1_vx1 $b1_vy1 $b1_vz2) //4
+ ($b1_vx2 $b1_vy1 $b1_vz2) //5
+ ($b1_vx2 $b1_vy2 $b1_vz2) //6
+ ($b1_vx1 $b1_vy2 $b1_vz2) //7
+
+ );
+
+blocks
+(
+// block 1
+hex (0 1 2 3 4 5 6 7) (_x_cells _y_cells _z_cells) simpleGrading (1 1 1)
+
+ );
+ 
+
+
+
+edges
+(
+);
+
+boundary
+(
+ // block1
+ b1_xz_y2__SYM_sides
+ {
+   type symmetryPlane;
+   faces
+     (
+      (3 7 6 2)
+      );
+ }
+ b1_xz_y1__SYM_sides
+ {
+   type symmetryPlane;
+   faces
+     (
+      (1 5 4 0)
+      );
+ }
+ b1_yz_x2__SYM_sides
+ {
+   type symmetryPlane;
+   faces
+     (
+      (2 6 5 1)
+      );
+ }
+ b1_yz_x1__SYM_sides
+ {
+   type symmetryPlane;
+   faces
+     (
+      (0 4 7 3)
+      );
+ }
+
+ b1_xy_z1__WW_bottom
+ {
+   type wall;
+   faces
+     (
+      (0 3 2 1)
+      );
+ }
+ b1_xy_z2__WW_top
+ {
+   type wall;
+   faces
+     (
+      (4 5 6 7)
+      );
+ }
+
+ );
+mergePatchPairs
+(
+ // (b1_xz_y2 b3_xz_y1)
+ // (b2_xz_y1 b3_xz_y2)
+
+ // (b1_xz_y2 b4_xz_y1)
+ // (b2_xz_y1 b4_xz_y2)
+
+ // // // //-
+ // (b1_xz_y2 b5_xz_y1)
+ // (b2_xz_y1 b5_xz_y2)
+
+
+ // (b3_yz_x2 b5_yz_x1 )
+ // (b4_yz_x1 b5_yz_x2 )
+ );
+
+// ************************************************************************* //

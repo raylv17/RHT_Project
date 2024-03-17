@@ -1,0 +1,20 @@
+FORMAT
+type: ensight gold
+
+GEOMETRY
+model:  data/00000000/geometry
+
+VARIABLE
+scalar per node:    1  G               data/********/G
+scalar per node:    1  T               data/********/T
+scalar per node:    1  a               data/********/a
+
+TIME
+time set:               1
+number of steps:        1
+filename start number:  0
+filename increment:     1
+time values:
+  1.00000e+00
+
+# end

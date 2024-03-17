@@ -1,0 +1,232 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version         2.0;
+    format          ascii;
+    class           dictionary;
+    object          controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     fireFoam;
+
+startFrom       startTime;
+
+startTime       0.0;
+
+stopAt          endTime;
+
+endTime         1;
+
+deltaT          1;
+
+writeControl    adjustable;
+
+writeInterval   1;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  12;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   12;
+
+graphFormat     raw;
+
+runTimeModifiable yes;
+
+adjustTimeStep  yes;
+
+maxCo           0.5;
+
+functions
+{
+  writeObjects1.writeObjects
+    {
+      type        writeObjects;
+        libs        (utilityFunctionObjects);
+        objects     (a qem);// soot aLambda_0 bLambda_0);
+      timeStart       0.0;
+        timeEnd         10.0;
+        executeControl  timeStep;
+        executeInterval 1;
+        writeControl    timeStep;
+      writeInterval   1;
+    }
+
+	DO_linesample.sets
+  {
+	type sets;
+		libs (sampling);
+		writeControl timeStep;
+		outputInterval 1;
+		interpolationScheme cellPoint; // vs cell (no interpolation)
+	setFormat csv;
+		sets
+		  (
+		   data
+			{
+			  type uniform;
+				axis z;
+			    	start   (0.0  0.0 -0.6);
+			    	end     (0.0  0.0 0.6);
+			  nPoints 200;
+			}
+		   );
+	fields (rho T p C2H4 CO CO2 H2O N2 O2);
+	// fields (rho T p G C2H4 CO CO2 H2O N2 O2 ILambda_0_0 ILambda_1_0 soot);
+  }
+	
+  DO_linesample_RAD.sets
+	{
+		type sets;
+		libs (sampling);
+		writeControl timeStep;
+		outputInterval 1;
+		interpolationScheme cellPoint; // vs cell (no interpolation)
+		setFormat csv;
+		sets
+		(
+			data
+			{
+				type uniform;
+				axis z;
+			    	start   (0.0  0.0 -0.6);
+			    	end     (0.0  0.0 0.6);
+				nPoints 200;
+}
+		);
+fields (a ILambda_0_0 ILambda_1_0 G);// aLambda_0  bLambda_0 );
+}
+
+DO_P.probes
+{
+  type                probes;
+  libs                (sampling);
+  writeControl        timeStep;
+  writeInterval       1;
+  log                 true;
+  probeLocations
+    (
+     (0.0 0.0 0.0)  
+     );
+  fields              (T G ILambda_0_0 ILambda_1_0 );
+}
+WW_z1_RAD_hf.patchProbes
+{
+  type                patchProbes;
+  libs                (sampling);
+  writeControl        timeStep;
+  writeInterval       1;
+  log                 true;
+  patch b1_xy_z1__WW_bottom;
+  probeLocations
+    (
+     (0.0 0.0 -0.6)  
+     );
+  fields              (qr qin qem T);
+}
+WW_z2_RAD_hf.patchProbes
+{
+  type                patchProbes;
+  libs                (sampling);
+  writeControl        timeStep;
+  writeInterval       1;
+  log                 true;
+  patch b1_xy_z2__WW_top;
+  probeLocations
+    (
+     (0.0 0.0 0.6)  
+     );
+  fields              (qr qin qem T);
+}
+
+ySym.surfaces
+{
+    type            surfaces;
+    libs            (sampling);
+    writeControl   timeStep;
+    writeInterval  1;
+
+    surfaceFormat   ensight;
+    fields          (T G a);
+
+    interpolationScheme cellPoint;
+
+    surfaces
+        (
+         yNormal
+         {
+         type            cuttingPlane;
+         planeType       pointAndNormal;
+         pointAndNormalDict
+         {
+         point (0.0 0.0 0);
+         normal (0 1 0);
+         }
+         interpolate     true;
+         }
+        );
+}
+zSym.surfaces
+{
+    type            surfaces;
+    libs            (sampling);
+    writeControl   timeStep;
+    writeInterval  1;
+
+    surfaceFormat   ensight;
+    fields          (T G a);
+
+    interpolationScheme cellPoint;
+
+    surfaces
+        (
+         zNormal
+         {
+         type            cuttingPlane;
+         planeType       pointAndNormal;
+         pointAndNormalDict
+         {
+         point (0.0 0.0 0);
+         normal (0 0 1);
+         }
+         interpolate     true;
+         }
+        );
+}
+
+WW.surfaces
+{
+    type            surfaces;
+    libs            (sampling);
+    writeControl   timeStep;
+    writeInterval  1;
+
+    surfaceFormat   ensight;
+    fields          (T G a);
+
+    interpolationScheme cellPoint;
+
+    surfaces
+        (
+           patchAll
+           {
+           type            patch;
+           patches         ( ".*WW.*" );
+           }
+        );
+}
+}
+

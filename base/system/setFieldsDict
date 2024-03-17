@@ -1,0 +1,64 @@
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setFieldsDict;
+}
+
+defaultFieldValues
+(
+    volScalarFieldValue p 101334.21745
+    volScalarFieldValue T 1000.0
+    volScalarFieldValue N2 0.762
+    volScalarFieldValue O2 0.23
+    volScalarFieldValue H2O 0.0059
+    volScalarFieldValue CO2 0.00059
+    volScalarFieldValue soot 0.001
+    volScalarFieldValue CO 0.00
+    volScalarFieldValue C2H4 0.000
+    // volVectorFieldValue U (0 0 0)
+    // volScalarFieldValue H2O 0.23
+    // volScalarFieldValue O2 0.0059
+);
+
+regions
+(
+
+        // boxToCell
+        // {
+        //     box (-0.1 0 0) (0.1 0.005 0.005);
+        //     fieldValues
+        //     (
+        //         volScalarFieldValue p 101334.21745
+        //         volScalarFieldValue T 854.52
+
+        //         volScalarFieldValue O2 0.01
+        //         volScalarFieldValue N2 0.47
+        //         volScalarFieldValue H2O 0.09
+        //         volScalarFieldValue CO2 0.12
+        //         volScalarFieldValue CO 0.01
+        //         volScalarFieldValue C2H4 0.30
+        //         volScalarFieldValue soot 0.0
+        //     );
+        // }
+
+        // boxToCell
+        // {
+        //     box (-0.1 0 0) (0.1 0.005 0.005);
+        //     fieldValues
+        //     (
+        //         volScalarFieldValue p 101334.21745
+        //         volScalarFieldValue T 854.52
+
+        //         volScalarFieldValue N2 0.74
+        //         volScalarFieldValue O2 0.16
+        //         volScalarFieldValue CO2 0.014
+        //         volScalarFieldValue H2O 0.011
+        //         volScalarFieldValue soot 0.0
+        //         volScalarFieldValue CO 0.0002
+        //     );
+        // }
+    
+    );

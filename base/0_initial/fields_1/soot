@@ -1,0 +1,59 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      soot;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// #include "../system/case.setup"
+// #include "../system/case_InternalField.setup"
+dimensions      [0 0 0 0 0 0 0];
+
+// internalField   ${:internalField.nonuniform.soot};
+internalField   uniform 0.0;
+// internalField   ${:internalField.nonuniform.soot};
+
+boundaryField
+{
+  // ${:DefaultFIRE.boundaryField.soot};
+  // ${:boundaryField.soot};
+    b1_xz_y2_empty
+    {
+        type            empty;
+    }
+    b1_xz_y1_empty
+    {
+        type            empty;
+    }
+    b1_yz_x2_WW
+    {
+        type            zeroGradient;
+        value           uniform 0.0;
+    }
+    b1_yz_x1_WW
+    {
+        type            zeroGradient;
+        value           uniform 0.0;
+    }
+    b1_xy_z1_empty
+    {
+        type            empty;
+    }
+    b1_xy_z2_empty
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

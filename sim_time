@@ -1,0 +1,92 @@
+DATA/all_data_linesample_RAD already exists, not modified
+DATA/all_DO_P already exists, not modified
+DATA/all_postProcessing already exists, not modified
+## res: 1
+0.36      :th_2-ph_4-tau_0.0001-res_1
+0.37      :th_2-ph_4-tau_0.05-res_1
+0.37      :th_2-ph_4-tau_0.1-res_1
+0.32      :th_2-ph_4-tau_1-res_1
+0.23      :th_2-ph_4-tau_10-res_1
+1.35      :th_4-ph_8-tau_0.0001-res_1
+1.37      :th_4-ph_8-tau_0.05-res_1
+1.35      :th_4-ph_8-tau_0.1-res_1
+1.15      :th_4-ph_8-tau_1-res_1
+0.86      :th_4-ph_8-tau_10-res_1
+2.97      :th_6-ph_12-tau_0.0001-res_1
+3.0       :th_6-ph_12-tau_0.05-res_1
+2.94      :th_6-ph_12-tau_0.1-res_1
+2.56      :th_6-ph_12-tau_1-res_1
+1.85      :th_6-ph_12-tau_10-res_1
+5.25      :th_8-ph_16-tau_0.0001-res_1
+5.31      :th_8-ph_16-tau_0.05-res_1
+5.23      :th_8-ph_16-tau_0.1-res_1
+4.54      :th_8-ph_16-tau_1-res_1
+3.29      :th_8-ph_16-tau_10-res_1
+
+## res: 2
+4.04      :th_2-ph_4-tau_0.0001-res_2
+4.25      :th_2-ph_4-tau_0.05-res_2
+4.2       :th_2-ph_4-tau_0.1-res_2
+3.75      :th_2-ph_4-tau_1-res_2
+2.43      :th_2-ph_4-tau_10-res_2
+15.77     :th_4-ph_8-tau_0.0001-res_2
+15.97     :th_4-ph_8-tau_0.05-res_2
+15.66     :th_4-ph_8-tau_0.1-res_2
+13.43     :th_4-ph_8-tau_1-res_2
+8.31      :th_4-ph_8-tau_10-res_2
+35.37     :th_6-ph_12-tau_0.0001-res_2
+35.14     :th_6-ph_12-tau_0.05-res_2
+34.58     :th_6-ph_12-tau_0.1-res_2
+29.48     :th_6-ph_12-tau_1-res_2
+18.16     :th_6-ph_12-tau_10-res_2
+62.52     :th_8-ph_16-tau_0.0001-res_2
+64.22     :th_8-ph_16-tau_0.05-res_2
+62.12     :th_8-ph_16-tau_0.1-res_2
+52.58     :th_8-ph_16-tau_1-res_2
+32.11     :th_8-ph_16-tau_10-res_2
+
+## res: 4
+77.64     :th_2-ph_4-tau_0.0001-res_4
+77.04     :th_2-ph_4-tau_0.05-res_4
+76.94     :th_2-ph_4-tau_0.1-res_4
+67.28     :th_2-ph_4-tau_1-res_4
+36.81     :th_2-ph_4-tau_10-res_4
+315.91    :th_4-ph_8-tau_0.0001-res_4
+300.26    :th_4-ph_8-tau_0.05-res_4
+298.95    :th_4-ph_8-tau_0.1-res_4
+259.09    :th_4-ph_8-tau_1-res_4
+138.23    :th_4-ph_8-tau_10-res_4
+689.85    :th_6-ph_12-tau_0.0001-res_4
+657.07    :th_6-ph_12-tau_0.05-res_4
+595.61    :th_6-ph_12-tau_0.1-res_4
+576.52    :th_6-ph_12-tau_1-res_4
+311.9     :th_6-ph_12-tau_10-res_4
+1094.09   :th_8-ph_16-tau_0.0001-res_4
+993.44    :th_8-ph_16-tau_0.05-res_4
+1093.62   :th_8-ph_16-tau_0.1-res_4
+973.43    :th_8-ph_16-tau_1-res_4
+435.52    :th_8-ph_16-tau_10-res_4
+
+## res: 8
+944.87    :th_2-ph_4-tau_0.0001-res_8
+942.33    :th_2-ph_4-tau_0.05-res_8
+919.17    :th_2-ph_4-tau_0.1-res_8
+814.15    :th_2-ph_4-tau_1-res_8
+408.85    :th_2-ph_4-tau_10-res_8
+3730.33   :th_4-ph_8-tau_0.0001-res_8
+3561.36   :th_4-ph_8-tau_0.05-res_8
+3525.86   :th_4-ph_8-tau_0.1-res_8
+3049.01   :th_4-ph_8-tau_1-res_8
+1466.53   :th_4-ph_8-tau_10-res_8
+8371.8    :th_6-ph_12-tau_0.0001-res_8
+7722.89   :th_6-ph_12-tau_0.05-res_8
+7887.14   :th_6-ph_12-tau_0.1-res_8
+6812.52   :th_6-ph_12-tau_1-res_8
+3287.89   :th_6-ph_12-tau_10-res_8
+15171.67  :th_8-ph_16-tau_0.0001-res_8
+19180.87  :th_8-ph_16-tau_0.05-res_8
+13776.48  :th_8-ph_16-tau_0.1-res_8
+11670.14  :th_8-ph_16-tau_1-res_8
+5768.61   :th_8-ph_16-tau_10-res_8
+
+total: 128640.43 s ~ 35.73345277777778 hrs

@@ -1,0 +1,40 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      soot;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// #include "../system/case.setup"
+// #include "../system/case_InternalField.setup"
+dimensions      [0 0 0 0 0 0 0];
+
+// internalField   ${:internalField.nonuniform.soot};
+internalField   uniform 0.0;
+// internalField   ${:internalField.nonuniform.soot};
+
+boundaryField
+{
+  ".*WW.*"
+    {
+      type            zeroGradient;
+        value           uniform 0.0;
+    }
+".*SYM.*"
+  {
+    type            symmetryPlane;
+  }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,23 @@
+// State file for writer output
+
+times           1 ( 1 );
+
+geometry        1 ( 0 );
+
+fields
+{
+    G
+    {
+        type            scalar;
+    }
+    T
+    {
+        type            scalar;
+    }
+    a
+    {
+        type            scalar;
+    }
+}
+
+// End
